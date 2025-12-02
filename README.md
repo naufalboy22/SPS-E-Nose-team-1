@@ -1,1 +1,1 @@
-# SPS-E-Nose-team-1
+# Pengembangan Aplikasi GUI untuk Visualisasi Data Electronic Nose (eNose) dengan Backend Rust dan Frontend Qt Python
