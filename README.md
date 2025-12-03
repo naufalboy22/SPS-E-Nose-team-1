@@ -19,6 +19,34 @@ This project implements a complete electronic nose system capable of:
 - Saving datasets in CSV/JSON format
 - Offline visualization using GNUPLOT scripts
 
+## Requirements
+**Hardware**
+- Arduino Uno R4 Wifi
+- Arduino Shield
+- Motor Driver
+- Multichannel Gas Sensor V2
+- MICS 5524
+- FAN
+- Motor Pump 12V
+
+**Software**
+- Python 3.13
+- Rust Programming Language V 1.77
+- InfluxDB
+- Edge Impuls
+- Arduino IDE
+
+## Hardware Connection
+| Componen                    | Pin Arduino UNO R4            | Keterangan     |
+|-----------------------------|-------------------------------|----------------|
+| Multichannel Gas Sensor V2  | I2C                           | Digital        |
+| MICS 5524                   | Analog                        | Analog         |
+| FAN                         | Motor Driver 1                | PWM            |
+| Motor Pump 12V              | Motor Driver 2                | PWM            |
+
+## Langkah Menjalankan Program
+**1. Unduh ZIP dan extract ALL link berikut:**
+
 ## Project Structure / System Architecture
 
 ```bash
