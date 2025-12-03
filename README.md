@@ -20,6 +20,8 @@ This project implements a complete electronic nose system capable of:
 - Offline visualization using GNUPLOT scripts
 
 ## Project Structure / System Architecture
+
+```bash
 Arduino/
 └── emose_backend/                   # Project root
     ├── src/
