@@ -28,20 +28,23 @@ This project implements a complete electronic nose system capable of:
 - Offline visualization using GNUPLOT scripts
 
 ## System Architecture
+## System Architecture / Struktur Proyek
+
+```bash
 Arduino/
-├── emose_backend/                  # Root folder proyek backend
-│   ├── src/
-│   │   └── main.rs                 # Entry point aplikasi (Rust backend)
-│   ├── target/                     # Build artifacts (otomatis oleh Cargo)
-│   ├── .gitignore
-│   ├── Cargo.lock
-│   ├── Cargo.toml                  # Konfigurasi proyek Rust & dependencies
-│   ├── influxdb2-2.7.12-windows/   # Binary InfluxDB lokal (Windows)
-│   ├── pbl_env/                    # Virtual environment Python
-│   ├── sampling_history/           # Folder penyimpanan data sampling/history
-│   └── venv/                       # Python virtual environment
-│       ├── dashboard.json          # Konfigurasi dashboard (biasanya untuk Grafana/InfluxDB)
-│       ├── gui_frontend.py         # Script GUI frontend (Python)
-│       ├── temp_ei_upload.csv      # File CSV temporary untuk data upload EI
-│       └── temp_upload_ei.csv      # File CSV temporary untuk data upload EI
+└── emose_backend/                  # Root folder proyek
+    ├── src/
+    │   └── main.rs                 # Entry point backend (Rust)
+    ├── target/                     # Build artifacts (dibuat otomatis oleh Cargo)
+    ├── .gitignore
+    ├── Cargo.lock
+    ├── Cargo.toml                  # Konfigurasi proyek Rust + dependencies
+    ├── influxdb2-2.7.12-windows/   # Binary InfluxDB v2 lokal (untuk development di Windows)
+    ├── pbl_env/                    # (Opsional) Python virtual environment lain
+    ├── sampling_history/           # Folder penyimpanan riwayat sampling sensor
+    └── venv/                       # Python virtual environment (untuk GUI & script)
+        ├── dashboard.json          # Konfigurasi dashboard Grafana
+        ├── gui_frontend.py         # Aplikasi GUI frontend (Python)
+        ├── temp_ei_upload.csv      # File CSV sementara proses upload data EI
+        └── temp_upload_ei.csv      # File CSV sementara (alternatif)
 
