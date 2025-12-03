@@ -26,6 +26,22 @@ This project implements a complete electronic nose system capable of:
 - Modern desktop GUI built with Python Qt6 (PySide6) for live visualization
 - Saving datasets in CSV/JSON format
 - Offline visualization using GNUPLOT scripts
-- (Optional) Integration with Edge Impulse for basic ML classification
 
 ## System Architecture
+Arduino/
+├── emose_backend/                  # Root folder proyek backend
+│   ├── src/
+│   │   └── main.rs                 # Entry point aplikasi (Rust backend)
+│   ├── target/                     # Build artifacts (otomatis oleh Cargo)
+│   ├── .gitignore
+│   ├── Cargo.lock
+│   ├── Cargo.toml                  # Konfigurasi proyek Rust & dependencies
+│   ├── influxdb2-2.7.12-windows/   # Binary InfluxDB lokal (Windows)
+│   ├── pbl_env/                    # Virtual environment Python
+│   ├── sampling_history/           # Folder penyimpanan data sampling/history
+│   └── venv/                       # Python virtual environment
+│       ├── dashboard.json          # Konfigurasi dashboard (biasanya untuk Grafana/InfluxDB)
+│       ├── gui_frontend.py         # Script GUI frontend (Python)
+│       ├── temp_ei_upload.csv      # File CSV temporary untuk data upload EI
+│       └── temp_upload_ei.csv      # File CSV temporary untuk data upload EI
+
