@@ -1,14 +1,6 @@
-## Project Title
-**Development of GUI Application for Electronic Nose (eNose) Data Visualization with Rust Backend and Qt Python Frontend**
-
-# Electronic Nose (eNose) Data Visualization Application  
+# **Development of GUI Application for Electronic Nose (eNose) Data Visualization with Rust Backend and Qt Python Frontend**  
 **Signal Processing Course – Project-Based Learning (Odd Semester 2025/2026)**  
 Department of Instrumentation Engineering  
-
-![eNose System Overview](docs/images/system_overview.jpg)  
-*(Ganti gambar di atas dengan foto sistem eNose kelompokmu)*
-
-
 
 ## Team Members
 | No | Name                          | Student ID     |
