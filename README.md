@@ -82,18 +82,26 @@ This module serves as the primary gas acquisition unit in the eNose system. The 
 
 **Rust Backend**
 
-- **Bahasa:** Rust (ESP-IDF-ready architecture, async serial processing)
-- **Fungsi Utama:**
-Backend ini menerima data sensor dari Arduino Uno R4 melalui komunikasi Wi-Fi, memproses paket data, melakukan parsing ke format JSON/CSV, menyimpan data ke InfluxDB, serta menyediakan data yang siap ditampilkan pada GUI.
+- **Language:** Rust (ESP-IDF-ready architecture, async serial processing)
+- **Function:**
+This backend receives sensor data from Arduino Uno R4 via Wi-Fi communication, processes the data packets, parses them into JSON/CSV format, saves the data to InfluxDB, and provides data ready to be displayed on the GUI.
 
-- **Kemampuan:**
-- Membaca stream data dari Arduino (CSV/JSON)
-- Parsing otomatis dengan error handling
-- Menyimpan data ke InfluxDB (write API)
-- Menyediakan dataset sementara untuk Edge Impulse
-- Logging riwayat sampling ke folder sampling_history/
+- **Capabilities:**
+    - Reading data streams from Arduino (CSV/JSON)
+    - Automatic parsing with error handling
+    - Saving data to InfluxDB (write API)
+    - Providing a temporary dataset for Edge Impulse
+    - Logging sampling history to the sampling_history/ folder
 
-## Langkah Menjalankan Program
-**1. Unduh ZIP dan extract ALL link berikut:**
+**Python GUI Frontend**
+
+- **Language:** Python 3.11.9
+- **Framework:** PySide6 / PyQt6
+
+- **Main Functions:**
+The GUI is used to display gas sensor data in real-time, manage the sampling process, enter sample metadata, display FSM status, and export datasets for Edge Impulse and GNUPLOAD.
+
+## Steps to Run the Program
+**1. Download the ZIP and extract ALL the following links:**
 https://github.com/naufalboy22/SPS-E-Nose-team-1.git
 
