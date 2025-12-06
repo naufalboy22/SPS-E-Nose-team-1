@@ -38,17 +38,15 @@ Arduino/
 
 ## System Components
 ### 1. Arduino Uno R4 Gas Sampling Unit (arduino/)
-   
-**Bahasa:** Arduino C++
-
-**Hardware:**
-- Arduino Uno R4 WiFi
-- Arduino Shield
-- Motor Driver (untuk menggerakkan kipas & pompa)
-- Multichannel Gas Sensor V2
-- MICS-5524
-- FAN
-- Motor Pump 12V
+- **Bahasa:** Arduino C++
+- **Hardware:**
+    - Arduino Uno R4 WiFi
+    - Arduino Shield
+    - Motor Driver (untuk menggerakkan kipas & pompa)
+    - Multichannel Gas Sensor V2
+    - MICS-5524
+    - FAN
+    - Motor Pump 12V
 
 **Fungsi:**
 Module ini berfungsi sebagai unit akuisisi gas utama dalam sistem eNose. Arduino Uno R4 WiFi membaca beberapa kanal sensor gas (Multichannel Gas Sensor V2 dan MICS-5524), mengaktifkan kipas untuk menarik aroma sampel, serta mengontrol pompa 12V untuk proses mengeluarkan udara dalam camber. Data sensor dikirim secara real-time melalui USB serial ke backend (Rust) untuk diproses dan divisualisasikan (Python).
@@ -57,30 +55,28 @@ Module ini berfungsi sebagai unit akuisisi gas utama dalam sistem eNose. Arduino
    
 **Multichannel Gas Sensor V2**
 
-**Interface:** I2C
-
-**Parameter:** NH3, CO, NO2, alkohol, benzene, VOC umum
-
-**Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
+- **Interface:** I2C
+- **Parameter:** NH3, CO, NO2, alkohol, benzene, VOC umum
+- **Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
 
 **MICS-5524** 
-**Interface:** Analog voltage
-**Parameter:** gas reducing (CO, VOC)
-**Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
+- **Interface:** Analog voltage
+- **Parameter:** gas reducing (CO, VOC)
+- **Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
 
-### 3. Kontrol Aktuator
+### 3. Control Aktuator
 
-**Kipas (FAN):**
+**FAN:**
 - Digunakan untuk memastikan aliran udara stabil ke ruang sampling.
 - Digerakkan melalui motor driver dari Arduino Shield.
 
-**Pompa 12V:**
+**Pump 12V:**
 - Menarik sampel gas ke ruang sensor pada saat proses sampling.
 - Dinyalakan/dimatikan menggunakan motor driver untuk 12V.
 
 **Komunikasi Data**
-**Protocol:** Serial USB
-**Rate:** 9600 baud 
+- **Protocol:** Serial Port & Wi-Fi
+- **Rate:** 9600 baud 
 Arduino mengirim data sensor dalam format CSV / JSON ke backend Rust untuk diproses lebih lanjut.
 
 ## Requirements
