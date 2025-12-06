@@ -64,5 +64,5 @@ Arduino/
 
 ## Langkah Menjalankan Program
 **1. Unduh ZIP dan extract ALL link berikut:**
-
+https://github.com/naufalboy22/SPS-E-Nose-team-1.git
 
