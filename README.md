@@ -52,40 +52,31 @@ Arduino/
 **Fungsi:**
 Module ini berfungsi sebagai unit akuisisi gas utama dalam sistem eNose. Arduino Uno R4 WiFi membaca beberapa kanal sensor gas (Multichannel Gas Sensor V2 dan MICS-5524), mengaktifkan kipas untuk menarik aroma sampel, serta mengontrol pompa 12V untuk proses mengeluarkan udara dalam camber. Data sensor dikirim secara real-time melalui USB serial ke backend (Rust) untuk diproses dan divisualisasikan (Python).
 
-## 2. Metode Pembacaan Sensor
+### 2. Metode Pembacaan Sensor
    
 **Multichannel Gas Sensor V2**
-Interface: Analog & I2C
-Parameter yang dibaca: NH3, CO, NO2, alkohol, benzene, VOC umum
-Output: tegangan analog per kanal atau nilai terkalibrasi via I2C
+**Interface:** I2C
+**Parameter:** NH3, CO, NO2, alkohol, benzene, VOC umum
+**Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
 
-MICS-5524 (CO / VOC Sensor)
-Interface: Analog voltage
+**MICS-5524** 
+**Interface:** Analog voltage
+**Parameter:** gas reducing (CO, VOC)
+**Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
 
-Parameter: gas reducing (CO, VOC)
+### 3. Kontrol Aktuator
 
-Pengukuran dilakukan melalui ADC internal Arduino Uno R4
+**Kipas (FAN):**
+- Digunakan untuk memastikan aliran udara stabil ke ruang sampling.
+- Digerakkan melalui motor driver dari Arduino Shield.
 
-Kontrol Aktuator
+**Pompa 12V:**
+- Menarik sampel gas ke ruang sensor pada saat proses sampling.
+- Dinyalakan/dimatikan menggunakan motor driver untuk 12V.
 
-Kipas (FAN):
-
-Digunakan untuk memastikan aliran udara stabil ke ruang sampling.
-
-Digerakkan melalui motor driver dari Arduino Shield.
-
-Pompa 12V:
-
-Menarik sampel gas ke ruang sensor pada saat proses sampling.
-
-Dinyalakan/dimatikan menggunakan motor driver untuk 12V.
-
-Komunikasi Data
-
-Protocol: Serial USB
-
-Rate: 115200 baud (umumnya untuk Uno R4, bisa kamu ganti sesuai program)
-
+**Komunikasi Data**
+**Protocol:** Serial USB
+**Rate:** 9600 baud 
 Arduino mengirim data sensor dalam format CSV / JSON ke backend Rust untuk diproses lebih lanjut.
 
 ## Requirements
