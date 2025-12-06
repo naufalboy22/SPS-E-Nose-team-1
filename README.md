@@ -38,46 +38,53 @@ Arduino/
 
 ## System Components
 ### 1. Arduino Uno R4 Gas Sampling Unit (arduino/)
-- **Bahasa:** Arduino C++
+- **Language:** Arduino C++
 - **Hardware:**
     - Arduino Uno R4 WiFi
     - Arduino Shield
-    - Motor Driver (untuk menggerakkan kipas & pompa)
+    - Motor Driver (to drive the fan & pump)
     - Multichannel Gas Sensor V2
     - MICS-5524
     - FAN
     - Motor Pump 12V
 
-**Fungsi:**
-Module ini berfungsi sebagai unit akuisisi gas utama dalam sistem eNose. Arduino Uno R4 WiFi membaca beberapa kanal sensor gas (Multichannel Gas Sensor V2 dan MICS-5524), mengaktifkan kipas untuk menarik aroma sampel, serta mengontrol pompa 12V untuk proses mengeluarkan udara dalam camber. Data sensor dikirim secara real-time melalui USB serial ke backend (Rust) untuk diproses dan divisualisasikan (Python).
+**Function:**
+This module serves as the primary gas acquisition unit in the eNose system. The Arduino Uno R4 WiFi reads multiple gas sensor channels (Multichannel Gas Sensor V2 and MICS-5524), activates a fan to draw in sample odors, and controls a 12V pump to remove air from the chamber. Sensor data is sent in real-time via USB serial to the backend (Rust) for processing and visualization (Python).
 
-### 2. Metode Pembacaan Sensor
+### 2. Sensor Reading Method
    
 **Multichannel Gas Sensor V2**
 
 - **Interface:** I2C
 - **Parameter:** NH3, CO, NO2, alkohol, benzene, VOC umum
-- **Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
+- **Output:** analog voltage per channel or calibrated value via I2C
 
 **MICS-5524** 
 - **Interface:** Analog voltage
-- **Parameter:** gas reducing (CO, VOC)
-- **Output:** tegangan analog per kanal atau nilai terkalibrasi via I2C
+- **Parameter:** gas reducing 
+- **Output:** analog voltage per channel or calibrated value via Analog voltage
 
 ### 3. Control Aktuator
 
 **FAN:**
-- Digunakan untuk memastikan aliran udara stabil ke ruang sampling.
-- Digerakkan melalui motor driver dari Arduino Shield.
+- Used to ensure a steady airflow to the sampling chamber.
+- Driven by a motor driver from an Arduino Shield.
 
 **Pump 12V:**
-- Menarik sampel gas ke ruang sensor pada saat proses sampling.
-- Dinyalakan/dimatikan menggunakan motor driver untuk 12V.
+- Draws gas samples into the sensor chamber during the sampling process.
+- Turned on/off using a 12V motor driver.
 
-**Komunikasi Data**
+### 4. data communications**
 - **Protocol:** Serial Port & Wi-Fi
 - **Rate:** 9600 baud 
-Arduino mengirim data sensor dalam format CSV / JSON ke backend Rust untuk diproses lebih lanjut.
+
+### 5. Supporting Software
+
+- **Python 3.13:** GUI (PySide6/PyQt6) for real-time data visualization
+- **Rust 1.77:** Serial reader backend, data parser, and InfluxDB integration
+- **InfluxDB:** Storing time-series gas sensor data
+- **Edge Impulse:** ML training process from gas datasets
+- **Arduino IDE:** Arduino Uno R4 firmware development
 
 ## Requirements
 **Hardware**
