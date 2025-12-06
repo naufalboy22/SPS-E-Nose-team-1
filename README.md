@@ -36,7 +36,55 @@ Arduino/
         └── temp_upload_ei.csv       # Alternative temporary CSV file
 ```
 
+## System Components
+1. Arduino Uno R4 Gas Sampling Unit (arduino/)
+**Bahasa:** Arduino C++
+**Hardware:**
+- Arduino Uno R4 WiFi
+- Arduino Shield
+- Motor Driver (untuk menggerakkan kipas & pompa)
+- Multichannel Gas Sensor V2
+- MICS-5524
+- FAN
+- Motor Pump 12V
 
+**Fungsi:**
+Module ini berfungsi sebagai unit akuisisi gas utama dalam sistem eNose. Arduino Uno R4 WiFi membaca beberapa kanal sensor gas (Multichannel Gas Sensor V2 dan MICS-5524), mengaktifkan kipas untuk menarik aroma sampel, serta mengontrol pompa 12V untuk proses mengeluarkan udara dalam camber. Data sensor dikirim secara real-time melalui USB serial ke backend (Rust) untuk diproses dan divisualisasikan (Python).
+
+2. Metode Pembacaan Sensor
+**Multichannel Gas Sensor V2**
+Interface: Analog & I2C
+Parameter yang dibaca: NH3, CO, NO2, alkohol, benzene, VOC umum
+Output: tegangan analog per kanal atau nilai terkalibrasi via I2C
+
+MICS-5524 (CO / VOC Sensor)
+Interface: Analog voltage
+
+Parameter: gas reducing (CO, VOC)
+
+Pengukuran dilakukan melalui ADC internal Arduino Uno R4
+
+Kontrol Aktuator
+
+Kipas (FAN):
+
+Digunakan untuk memastikan aliran udara stabil ke ruang sampling.
+
+Digerakkan melalui motor driver dari Arduino Shield.
+
+Pompa 12V:
+
+Menarik sampel gas ke ruang sensor pada saat proses sampling.
+
+Dinyalakan/dimatikan menggunakan motor driver untuk 12V.
+
+Komunikasi Data
+
+Protocol: Serial USB
+
+Rate: 115200 baud (umumnya untuk Uno R4, bisa kamu ganti sesuai program)
+
+Arduino mengirim data sensor dalam format CSV / JSON ke backend Rust untuk diproses lebih lanjut.
 
 ## Requirements
 **Hardware**
@@ -63,8 +111,6 @@ Arduino/
 | FAN                         | Motor Driver 1                | PWM            |
 | Motor Pump 12V              | Motor Driver 2                | PWM            |
 
-## System Components
-1`ww
 
 ## Langkah Menjalankan Program
 **1. Unduh ZIP dan extract ALL link berikut:**
