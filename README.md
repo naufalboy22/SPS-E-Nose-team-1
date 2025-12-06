@@ -105,3 +105,15 @@ The GUI is used to display gas sensor data in real-time, manage the sampling pro
 **1. Download the ZIP and extract ALL the following links:**
 https://github.com/naufalboy22/SPS-E-Nose-team-1.git
 
+**2. Hubungkan Arduino R4 Wi-Fi dengan laptop**
+
+**3. Upload Program dari Arduino IDE ke Arduino R4 Wi-Fi**
+
+//Pastikan Nama Wi-Fi, Password Wi-Fi, dan Alamat IP sesuai
+
+**4. Jalankan Program Backend (Rust)**
+
+```bash
+PBL 2> cd .\enose_backend\
+PBL 2\enose_backend> cargo run
+```
