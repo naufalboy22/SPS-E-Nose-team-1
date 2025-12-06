@@ -62,6 +62,9 @@ Arduino/
 | FAN                         | Motor Driver 1                | PWM            |
 | Motor Pump 12V              | Motor Driver 2                | PWM            |
 
+## System Components
+1`ww
+
 ## Langkah Menjalankan Program
 **1. Unduh ZIP dan extract ALL link berikut:**
 https://github.com/naufalboy22/SPS-E-Nose-team-1.git
