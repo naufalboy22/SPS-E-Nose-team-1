@@ -56,12 +56,12 @@ This module serves as the primary gas acquisition unit in the eNose system. The 
 **Multichannel Gas Sensor V2**
 
 - **Interface:** I2C
-- **Parameter:** NH3, CO, NO2, alkohol, benzene, VOC umum
+- **Parameter:** NO2, C2H5OH, VOC, dan CO
 - **Output:** analog voltage per channel or calibrated value via I2C
 
 **MICS-5524** 
 - **Interface:** Analog voltage
-- **Parameter:** gas reducing 
+- **Parameter:** CO, C2H5OH, dan VOC
 - **Output:** analog voltage per channel or calibrated value via Analog voltage
 
 ### 3. Control Aktuator
