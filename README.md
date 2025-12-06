@@ -37,7 +37,7 @@ Arduino/
 ```
 
 ## System Components
-## 1. Arduino Uno R4 Gas Sampling Unit (arduino/)
+### 1. Arduino Uno R4 Gas Sampling Unit (arduino/)
    
 **Bahasa:** Arduino C++
 **Hardware:**
