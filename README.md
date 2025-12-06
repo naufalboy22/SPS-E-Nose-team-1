@@ -80,11 +80,6 @@ This module serves as the primary gas acquisition unit in the eNose system. The 
 
 ### 5. Supporting Software
 
-- **Python 3.13:** GUI (PySide6/PyQt6) for real-time data visualization
-- **Rust 1.77:** Serial reader backend, data parser, and InfluxDB integration
-- **InfluxDB:** Storing time-series gas sensor data
-- **Edge Impulse:** ML training process from gas datasets
-- **Arduino IDE:** Arduino Uno R4 firmware development
 
 
 
