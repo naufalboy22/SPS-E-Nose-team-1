@@ -117,3 +117,9 @@ https://github.com/naufalboy22/SPS-E-Nose-team-1.git
 PBL 2> cd .\enose_backend\
 PBL 2\enose_backend> cargo run
 ```
+
+**5. Jalankan Program Frontend (Python)**
+
+```bash
+PBL 2> python gui_frontend.py
+```
