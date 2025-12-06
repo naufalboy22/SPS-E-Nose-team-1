@@ -80,8 +80,18 @@ This module serves as the primary gas acquisition unit in the eNose system. The 
 
 ### 5. Supporting Software
 
+**Rust Backend**
 
+- **Bahasa:** Rust (ESP-IDF-ready architecture, async serial processing)
+- **Fungsi Utama:**
+Backend ini menerima data sensor dari Arduino Uno R4 melalui komunikasi Wi-Fi, memproses paket data, melakukan parsing ke format JSON/CSV, menyimpan data ke InfluxDB, serta menyediakan data yang siap ditampilkan pada GUI.
 
+- **Kemampuan:**
+- Membaca stream data dari Arduino (CSV/JSON)
+- Parsing otomatis dengan error handling
+- Menyimpan data ke InfluxDB (write API)
+- Menyediakan dataset sementara untuk Edge Impulse
+- Logging riwayat sampling ke folder sampling_history/
 
 ## Langkah Menjalankan Program
 **1. Unduh ZIP dan extract ALL link berikut:**
