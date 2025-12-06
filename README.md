@@ -37,7 +37,8 @@ Arduino/
 ```
 
 ## System Components
-1. Arduino Uno R4 Gas Sampling Unit (arduino/)
+## 1. Arduino Uno R4 Gas Sampling Unit (arduino/)
+   
 **Bahasa:** Arduino C++
 **Hardware:**
 - Arduino Uno R4 WiFi
@@ -51,7 +52,7 @@ Arduino/
 **Fungsi:**
 Module ini berfungsi sebagai unit akuisisi gas utama dalam sistem eNose. Arduino Uno R4 WiFi membaca beberapa kanal sensor gas (Multichannel Gas Sensor V2 dan MICS-5524), mengaktifkan kipas untuk menarik aroma sampel, serta mengontrol pompa 12V untuk proses mengeluarkan udara dalam camber. Data sensor dikirim secara real-time melalui USB serial ke backend (Rust) untuk diproses dan divisualisasikan (Python).
 
-2. Metode Pembacaan Sensor
+## 2. Metode Pembacaan Sensor
    
 **Multichannel Gas Sensor V2**
 Interface: Analog & I2C
