@@ -74,7 +74,7 @@ This module serves as the primary gas acquisition unit in the eNose system. The 
 - Draws gas samples into the sensor chamber during the sampling process.
 - Turned on/off using a 12V motor driver.
 
-### 4. data communications**
+### 4. data communications
 - **Protocol:** Serial Port & Wi-Fi
 - **Rate:** 9600 baud 
 
