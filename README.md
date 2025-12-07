@@ -109,6 +109,8 @@ https://github.com/naufalboy22/SPS-E-Nose-team-1.git
 
 **3. Upload Program from Arduino IDE to Arduino R4 Wi-Fi**
 
+<img width="1919" height="873" alt="Screenshot 2025-12-07 113406" src="https://github.com/user-attachments/assets/050c33b3-2931-4adb-b782-0cd840634f92" />
+
 //Make sure the Wi-Fi Name, Wi-Fi Password and IP Address match
 
 **4. Run Backend Program (Rust)**
