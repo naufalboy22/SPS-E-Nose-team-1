@@ -9,7 +9,7 @@ Department of Instrumentation Engineering
 | 2  | Revi Azizu Rohman             | 2042241029     |
 | 3  | Annisaa Zulfa Ahsanah         | 2042241040     |
 
-Tested sample: **Tembakau (Apel, Ice Melon, Malboro Ice, Malboro Merah)** 
+Tested sample: **Tembakau (Apel, Jambu Ice, Malboro Ice, Malboro Merah)** 
 
 ## Project Overview
 This project develops an integrated Electronic Nose (eNose) system consisting of an Arduino Uno R4 WiFi gas-sensing device, a Rust backend for data processing and serial communication, and a Qt Python (PySide6/PyQt6) GUI for real-time visualization.
