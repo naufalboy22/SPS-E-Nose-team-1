@@ -11,6 +11,8 @@ Department of Instrumentation Engineering
 
 Tested sample: **Tembakau (Apel, Jambu Ice, Malboro Ice, Malboro Merah)** 
 
+Our Video Link: https://youtu.be/VncRfjfivd4?si=R_qADKoIAXvgxx96 
+
 ## Project Overview
 This project develops an integrated Electronic Nose (eNose) system consisting of an Arduino Uno R4 WiFi gas-sensing device, a Rust backend for data processing and serial communication, and a Qt Python (PySide6/PyQt6) GUI for real-time visualization.
 The system captures gas sensor responses, displays them through live graphs and numerical indicators, and allows users to record labeled datasets. Collected data can be exported (CSV/JSON), visualized using GNUPLOT, and optionally integrated with Edge Impulse for basic machine-learning modeling.
